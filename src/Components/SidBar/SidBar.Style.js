@@ -7,16 +7,16 @@ export const Sid = styled(Flex)`
   width: 20%;
   height: 100%;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
 
 `;
 export const Ul = styled(Flex)`
   width: 100%;
-  height: 60%;
+  height: 40%;
   flex-direction: column;
   align-items: flex-start;
   justify-content:space-between;
-  padding-bottom: 5rem;
+  padding-bottom: 20rem;
 `;
 export const Li = styled(Flex)`
   flex-direction: row-reverse;

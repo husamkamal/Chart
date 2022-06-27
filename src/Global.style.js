@@ -9,6 +9,6 @@ export const Flex =styled.div`
     export const AppStyle=styled(Flex)`
         flex-direction:row;
         width:100%;
-        height:99.99vh;
+        height:126vh;
         background-color:#E5E5E5;
     `

@@ -3,22 +3,23 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useDispatch ,useSelector } from 'react-redux';
+import { useDispatch ,useSelector ,Provider } from 'react-redux';
 import { actionMonth } from '../../Store/MainState';
 export default function SelectSmall() {
-    const Month=useSelector((state)=>state.month)
+    const month=useSelector(state => state.month)
     const dipatch=useDispatch()
   const handleChange = (event) => {
     dipatch(actionMonth.MonthName(event))
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+    
+    <FormControl sx={{ margin:' .7rem 0', minWidth: 120 }} size="small">
       <InputLabel id="demo-select-small">Months</InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
-        value={Month}
+        value={month}
         label="Month"
         onChange={handleChange}
       >
@@ -39,5 +40,6 @@ export default function SelectSmall() {
         <MenuItem value={"December"}>December</MenuItem>
       </Select>
     </FormControl>
+    
   );
 }

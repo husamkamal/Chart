@@ -4,7 +4,7 @@ import { Flex } from "../../Global.style";
 export const Header = styled(Flex)`
     width:100%;
     justify-content:space-between;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 `;
 export const HeaderDescription = styled(Flex)`
     flex-direction:column;

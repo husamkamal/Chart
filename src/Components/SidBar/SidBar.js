@@ -10,7 +10,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 const SidBar = () => {
     return (
         <Sid>
-            <img src={Images.path24} alt='logo'  />
+            <img style={{margin:'3rem 0'}} src={Images.path24} alt='logo'  />
             <Ul>
                 <Li >الرئيسية <WidgetsIcon style={{padding:"0 .5rem"}}/> </Li>
                 <Li>لحجوزات <ArticleIcon style={{padding:"0 .5rem"}}/></Li>
