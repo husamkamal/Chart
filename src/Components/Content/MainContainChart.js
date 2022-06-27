@@ -1,11 +1,11 @@
 import React from 'react';
 import ChartBar from './ChartBar';
 import MainHeaderChart from './MainHeaderChart';
-import { useDispatch,useSelector } from "react-redux/es/exports";
+import {useSelector } from "react-redux/es/exports";
 import { ChartSt } from './MainContainChart.style';
 import { ChartRow } from './ChartBar.style';
 const MainContainChart = () => {
-    const dipatch=useDispatch()
+ 
     const select=useSelector(state=>state.chartDataPoint)
     const month =useSelector(state=>state.month)
     console.log(select)
