@@ -1,7 +1,7 @@
 import React from 'react';
 import { H1, Header, HeaderDescription, HeaderPara, Logo } from './MainHeader.style';
 import Avatar from '@mui/material/Avatar';
-import Images from '../../Assets';
+import Images from '../../../../Assets';
 const MainHeader = () => {
     return (
         <Header>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "../../Global.style";
+import { Flex } from "../../../../Global.style";
 
 export const Cards = styled(Flex)`
   width: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
-import ReservationsFilter from './ReservationsFilter';
+import ReservationsFilter from '../ReservationsFilter/ReservationsFilter';
 
-import SelectSmall from './Slecte';
+import SelectSmall from '../Slecte/Slecte';
 
 const ContentInfirmation = () => {
 

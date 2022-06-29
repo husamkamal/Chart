@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1 } from './MainHeader.style';
+import { H1 } from '../MainContentHeader/MainHeader.style';
 import BasicTable from './NewbookingsTable';
 const Newbookings = () => {
     return (

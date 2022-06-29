@@ -1,9 +1,12 @@
 import React from 'react';
-import ChartBar from './ChartBar';
-import MainHeaderChart from './MainHeaderChart';
+import ChartBar from '../ChartBar/ChartBar';
+
 import {useSelector } from "react-redux/es/exports";
+
+
+import MainHeaderChart from '../MainHeaderChart/MainHeaderChart';
 import { ChartSt } from './MainContainChart.style';
-import { ChartRow } from './ChartBar.style';
+import { ChartRow } from '../ChartBar/ChartBar.style';
 const MainContainChart = () => {
  
     const select=useSelector(state=>state.chartDataPoint)

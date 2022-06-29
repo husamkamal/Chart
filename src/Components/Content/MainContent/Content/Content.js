@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import MainHeader from "./MainHeader";
-import ContentInfirmation from "./ContentInfirmation";
-import Newbookings from "./Newbookings";
+import MainHeader from "../MainContentHeader/MainHeader";
+import ContentInfirmation from "../ContentInformation/ContentInfirmation";
+import Newbookings from "../NewBooking/Newbookings";
 import { TableChart } from "./Content.style";
-import MainContainChart from "./MainContainChart";
+import MainContainChart from "../MainContentCahrt/MainContainChart"
 
 const Content = () => {
   return (

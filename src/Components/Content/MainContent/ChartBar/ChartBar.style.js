@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Flex } from "../../Global.style";
+import { Flex } from "../../../../Global.style";
+
 
 export const ChartBarSt=styled(Flex)`
     flex-direction: column;

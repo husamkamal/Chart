@@ -1,7 +1,7 @@
 import React from 'react';
-import { H1 } from './MainHeader.style';
 import { HeaderChert } from './MainHeaderChart.style';
-import SelectSmall from './Slecte';
+import { H1 } from '../MainContentHeader/MainHeader.style';
+import SelectSmall from '../Slecte/Slecte';
 
 const MainHeaderChart = () => {
     return (

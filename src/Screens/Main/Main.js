@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../../Components/Content/Content';
+import Content from '../../Components/Content/MainContent/Content/Content';
 // import SidBar from '../../Components/SidBar/SidBar';
 import { MainScreen } from './Main.style';
 
