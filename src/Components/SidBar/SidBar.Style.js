@@ -4,10 +4,11 @@ import { Flex } from "../../Global.style";
 export const Sid = styled(Flex)`
   background-color: #4c2784;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  width: 20%;
+  width: 15%;
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
+  align-items:flex-start;
 
 `;
 export const Ul = styled(Flex)`

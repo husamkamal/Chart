@@ -4,13 +4,14 @@ import SidBar from "./Components/SidBar/SidBar";
 import { AppStyle } from "./Global.style";
 import store from "./Store";
 import {Provider} from "react-redux"
+import VerticalTabs from "./Components/SidBar/SidBar";
 function App() {
   return (
     <Provider store={store}>
       <AppStyle>
-        <SidBar />
+        <VerticalTabs/>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={ ''} />
         </Routes>
       </AppStyle>
     </Provider>
