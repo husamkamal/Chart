@@ -1,6 +1,4 @@
-import Main from "./Screens/Main/Main";
 import { Routes, Route } from "react-router-dom";
-import SidBar from "./Components/SidBar/SidBar";
 import { AppStyle } from "./Global.style";
 import store from "./Store";
 import {Provider} from "react-redux"
