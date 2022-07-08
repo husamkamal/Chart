@@ -3,8 +3,6 @@ import Container from "@mui/material/Container";
 import MainHeader from "../MainContentHeader/MainHeader";
 import ContentInfirmation from "../ContentInformation/ContentInfirmation";
 import Newbookings from "../NewBooking/Newbookings";
-import { TableChart } from "./Content.style";
-import MainContainChart from "../MainContentCahrt/MainContainChart"
 import { H1 } from "../MainContentHeader/MainHeader.style";
 
 const Content = () => {
@@ -16,9 +14,8 @@ const Content = () => {
       <MainHeader />
       <ContentInfirmation />
       <div>
-      <H1>حجوزات جديدة</H1>
+        <H1>حجوزات جديدة</H1>
         <Newbookings />
-     
       </div>
     </Container>
   );

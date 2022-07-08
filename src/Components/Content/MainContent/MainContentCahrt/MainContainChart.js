@@ -1,51 +1,8 @@
-// import React from 'react';
-// import ChartBar from '../ChartBar/ChartBar';
-
-// import {useSelector } from "react-redux/es/exports";
-
-// import MainHeaderChart from '../MainHeaderChart/MainHeaderChart';
-// import { ChartSt } from './MainContainChart.style';
-// import { ChartRow } from '../ChartBar/ChartBar.style';
-// const MainContainChart = () => {
-
-//     const select=useSelector(state => state.Month)
-//     const month =useSelector(state=>state.month)
-//     console.log(select)
-//     const filter=select.chartDataPoint.filter(ele=>{
-//         return ele.label === month
-//     })
-//     console.log(filter, 55555555)
-//     return (
-//         <ChartSt style={{height:'27rem',marginTop:'3rem',width:'20rem'}} >
-//             <MainHeaderChart/>
-//             <ChartRow>
-//             {filter.map((ele)=>{
-
-//                 return <ChartBar value={ele.value} />
-//             })
-//             }
-//             </ChartRow>
-//         </ChartSt>
-//     );
-// }
-
-// export default MainContainChart;
 import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  CartesianGrid,
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
 import { Flex } from "../../../../Global.style";
 import MainHeaderChart from "../MainHeaderChart/MainHeaderChart";
-// import { Months } from "../../Assests";
-// import { FlexBox, Typography } from "../../Global.Styles";
-// import { MonthsList, Option } from "../test/style";
-// import { ResrvationNumBox } from "./style";
+
 const data = [
   { name: " الرابع", حجز: 100 },
   { name: "الثالث", حجز: 63 },
@@ -60,28 +17,9 @@ const RenderBarChart = () => {
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "start",
-        width:'360px'
+        width: "360px",
       }}
     >
-      {/* <ResrvationNumBox>
-        <Typography
-          style={{ margin: 17 }}
-          fontWeight={"700"}
-          fontSize={"21"}
-          color={"#191919"}
-        >
-          عدد الحجوزات
-        </Typography>
-        <MonthsList style={{ width: 120, height: 38, margin: 17 }}>
-          {Months.map((item) => {
-            return (
-              <Option key={item} value={item}>
-                {item}
-              </Option>
-            );
-          })}
-        </MonthsList>
-      </ResrvationNumBox> */}
       <MainHeaderChart />
       <BarChart
         style={{ backgroundColor: "#F6F6F6" }}
