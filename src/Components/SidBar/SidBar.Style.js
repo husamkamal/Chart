@@ -4,20 +4,20 @@ import { Flex } from "../../Global.style";
 export const Sid = styled(Flex)`
   background-color: #4c2784;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  width: 15%;
+  width: 18%;
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  align-items:flex-start;
+  align-items:center;
 
 `;
 export const Ul = styled(Flex)`
   width: 100%;
-  height: 40%;
+  height: 60%;
   flex-direction: column;
   align-items: flex-start;
   justify-content:space-between;
-  padding-bottom: 20rem;
+  list-style:none;
 `;
 export const Li = styled.li((props)=>({
 
