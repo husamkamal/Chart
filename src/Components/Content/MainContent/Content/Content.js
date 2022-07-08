@@ -5,6 +5,7 @@ import ContentInfirmation from "../ContentInformation/ContentInfirmation";
 import Newbookings from "../NewBooking/Newbookings";
 import { TableChart } from "./Content.style";
 import MainContainChart from "../MainContentCahrt/MainContainChart"
+import { H1 } from "../MainContentHeader/MainHeader.style";
 
 const Content = () => {
   return (
@@ -14,10 +15,11 @@ const Content = () => {
     >
       <MainHeader />
       <ContentInfirmation />
-      <TableChart>
+      <div>
+      <H1>حجوزات جديدة</H1>
         <Newbookings />
-        <MainContainChart/>
-      </TableChart>
+     
+      </div>
     </Container>
   );
 };

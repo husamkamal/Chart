@@ -6,7 +6,7 @@ import Select from '@mui/material/Select';
 import { useDispatch ,useSelector } from 'react-redux';
 import { actionMonth } from '../../../../Store/MainState';
 export default function SelectSmall() {
-    const month=useSelector(state => state.month)
+    const month=useSelector(state => state.Month.month)
     const dipatch=useDispatch()
   const handleChange = (event) => {
     dipatch(actionMonth.MonthName(event))

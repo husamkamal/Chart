@@ -3,11 +3,11 @@ import { Flex } from "../../../../Global.style";
 
 
 export const ContentContainer=styled(Flex)`
-    width:70%;
+
+    width:100%;
     background-color:red;
 `
 export const TableChart=styled(Flex)`
     width:100%;
-    
     justify-content:space-between;
 `

@@ -23,10 +23,10 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer style={{width:'100%'}} component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
+    <TableContainer style={{maxWidth:'65%',backgroundColor:'blue'}} component={Paper}>
+      <Table sx={{ minWidth: 665 }} aria-label="simple table">
+        <TableHead sx={{backgroundColor:'#FCFCFC'}} >
+          <TableRow sx={{height:'2.4rem'}} >
             <TableCell>رقم الحجز</TableCell>
             <TableCell align="right">الاسم</TableCell>
             <TableCell align="right">رقم الهاتف</TableCell>
@@ -34,11 +34,11 @@ export default function BasicTable() {
             <TableCell align="right">تاريخ الحجز</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody sx={{backgroundColor:'#F6F6F6',height:'22.8rem'}}>
           {rows.map((row) => (
             <TableRow
               key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 },height:'2.4rem' }}
             >
               <TableCell component="th" scope="row">
                 {row.name}

@@ -5,7 +5,7 @@ import SelectSmall from '../Slecte/Slecte';
 
 const MainHeaderChart = () => {
     return (
-        <HeaderChert>
+        <HeaderChert  >
             <H1>عدد الحجوزات </H1>
             <SelectSmall/>
         </HeaderChert>

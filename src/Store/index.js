@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
 import MonthSlice from './MainState'
-const store=configureStore({reducer:MonthSlice.reducer})
+import SidBarSlice from './SidBarRedux'
+const store=configureStore({reducer:{Month:MonthSlice.reducer,sidBar:SidBarSlice.reducer}})
 export default store

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ChartSt = styled.div`
-    padding: 1rem;
+    /* padding: 1rem; */
+    height: 50rem;
     border-radius: 12px;
     background-color: #f8dfff;
     text-align: center;

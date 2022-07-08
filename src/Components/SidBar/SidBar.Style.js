@@ -19,19 +19,24 @@ export const Ul = styled(Flex)`
   justify-content:space-between;
   padding-bottom: 20rem;
 `;
-export const Li = styled(Flex)`
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  width: 100%;
-  color:#FCFCFC;
-  font-family: "Tajawal";
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 20px;
-  padding:.5rem 0;
-  &:hover{
-    cursor:pointer;
-    background-color:#FCFCFC;
-    color:#191919;
-  }
-`;
+export const Li = styled.li((props)=>({
+
+  display:'flex',
+    flexDirection: 'row-reverse',
+    justifyContent: 'flex-end',
+    width: '100%',
+    paddingLeft: '1rem',
+    color:'#FCFCFC',
+    fontFamily: "Tajawal",
+    fontWeight: '500',
+    fontSize: '24px',
+    lineHeight: '20px',  
+    padding:'.5rem 0',
+    backgroundColor:props.isActive?"black":''
+    
+  }))
+  ;
+export const ImgDiv=styled(Flex)`
+  height:20%;
+  width:100%;
+`
