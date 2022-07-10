@@ -1,32 +1,39 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { TableCon } from "./Newbookings.style";
+import "./style.css";
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
-  createData('008', 'ابراهيم جمال', '+236 659 425', '35 ريال', '14-2-2022'),
-  createData('007', 'احمد الهندي', '+236 844 843', '37 ريال', '13-2-2022'),
-  createData('006', 'عبد الرحمن', '+236 289 843', '40 ريال','13-2-2022'),
-  createData('005', 'عبد الرحيم الغمري', '+236 582 843', '43 ريال', '12-2-2022'),
-  createData('004', 'سالم العمصي', '+236 520 843', '35 ريال','11-2-2022'),
-  createData('003', 'نواف احمد', '+236 744 843', '37 ريال   ','11-2-2022'),
-  createData('002', 'حليل حنفي', '+236 659 843', '70 ريال', '10-2-2022'),
+  createData("008", "ابراهيم جمال", "+236 659 425", "35 ريال", "14-2-2022"),
+  createData("007", "احمد الهندي", "+236 844 843", "37 ريال", "13-2-2022"),
+  createData("006", "عبد الرحمن", "+236 289 843", "40 ريال", "13-2-2022"),
+  createData(
+    "005",
+    "عبد الرحيم الغمري",
+    "+236 582 843",
+    "43 ريال",
+    "12-2-2022"
+  ),
+  createData("004", "سالم العمصي", "+236 520 843", "35 ريال", "11-2-2022"),
+  createData("003", "نواف احمد", "+236 744 843", "37 ريال   ", "11-2-2022"),
+  createData("002", "حليل حنفي", "+236 659 843", "70 ريال", "10-2-2022"),
 ];
 
 export default function BasicTable() {
   return (
-    <TableContainer style={{maxWidth:'65%',backgroundColor:'blue'}} component={Paper}>
+    <TableCon component={Paper}>
       <Table sx={{ minWidth: 665 }} aria-label="simple table">
-        <TableHead sx={{backgroundColor:'#FCFCFC'}} >
-          <TableRow sx={{height:'2.4rem'}} >
+        <TableHead sx={{ backgroundColor: "#FCFCFC" }}>
+          <TableRow sx={{ height: "2.4rem" }}>
             <TableCell>رقم الحجز</TableCell>
             <TableCell align="right">الاسم</TableCell>
             <TableCell align="right">رقم الهاتف</TableCell>
@@ -34,13 +41,16 @@ export default function BasicTable() {
             <TableCell align="right">تاريخ الحجز</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody sx={{backgroundColor:'#F6F6F6',height:'22.8rem'}}>
+        <TableBody sx={{ backgroundColor: "#F6F6F6", height: "22.8rem" }}>
           {rows.map((row) => (
             <TableRow
               key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 },height:'2.4rem' }}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+                height: "2.4rem",
+              }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell sx={{maxWidth:'10px'}} component="th" scope="row">
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.calories}</TableCell>
@@ -51,6 +61,6 @@ export default function BasicTable() {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </TableCon>
   );
 }

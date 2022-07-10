@@ -10,4 +10,8 @@ export const ContentContainer=styled(Flex)`
 export const TableChart=styled(Flex)`
     width:100%;
     justify-content:space-between;
+    @media (max-width: 600px) {
+      flex-direction:column;
+      height:56rem;
+    }
 `

@@ -21,12 +21,6 @@ const SidBar = () => {
             </Li>
           );
         })}
-        {/* <Li >الرئيسية <WidgetsIcon style={{padding:"0 .5rem"}}/> </Li> */}
-        {/* <Li>لحجوزات <ArticleIcon style={{padding:"0 .5rem"}}/></Li>
-                <Li>المستخدمين <PersonIcon style={{padding:"0 .5rem"}}/></Li>
-                <Li>لموظفين <GppGoodIcon style={{padding:"0 .5rem"}}/></Li>
-                <Li>أماكن الحجز <LocationOnIcon style={{padding:"0 .5rem"}}/></Li>
-                <Li>تسجيل خروج <ExitToAppIcon style={{padding:"0 .5rem"}}/> </Li> */}
       </Ul>
     </Sid>
   );

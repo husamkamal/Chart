@@ -4,11 +4,15 @@ import { Flex } from "../../Global.style";
 export const Sid = styled(Flex)`
   background-color: #4c2784;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  width: 18%;
+  width: 100%;
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items:center;
+  @media (max-width: 600px) {
+     /* display:none; */
+     /* width:100; */
+    }
 
 `;
 export const Ul = styled(Flex)`
