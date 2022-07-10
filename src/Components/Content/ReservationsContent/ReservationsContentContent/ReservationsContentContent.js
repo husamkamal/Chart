@@ -1,17 +1,20 @@
-import React from 'react';
-import ReservationsContentHeader from '../ReservationsContentHeader/ReservationsContentHeader';
-import ReservationsInformation from '../ReservationsInformation/ReservationsInformation';
-import EnhancedTable from '../Table/Table';
-import { ReservationsContentContainer } from './ReservationsContentContent.style';
+import { Container } from "@mui/system";
+import React from "react";
+import ReservationsContentHeader from "../ReservationsContentHeader/ReservationsContentHeader";
+import ReservationsInformation from "../ReservationsInformation/ReservationsInformation";
+import EnhancedTable from "../Table/Table";
 
 const ReservationsContentContent = () => {
-    return (
-        <ReservationsContentContainer>
-            <ReservationsContentHeader/>
-            <ReservationsInformation/>
-            <EnhancedTable/>
-        </ReservationsContentContainer>
-    );
-}
+  return (
+    <Container
+      style={{ height: "100%", justifyContent: "space-between" }}
+      maxWidth="lg"
+    >
+      <ReservationsContentHeader />
+      <ReservationsInformation />
+      <EnhancedTable />
+    </Container>
+  );
+};
 
 export default ReservationsContentContent;

@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const SidBar = () => {
   const navigate = useNavigate();
-  const {pathname}=useLocation()
+  const { pathname } = useLocation();
   const data = useSelector((state) => state.sidBar);
   return (
     <Sid>
@@ -16,7 +16,11 @@ const SidBar = () => {
       <Ul>
         {data.sidBar.map((ele) => {
           return (
-            <Li isActive={pathname===ele.path} onClick={() => navigate(ele.path)} key={ele.path}>
+            <Li
+              isActive={pathname === ele.path}
+              onClick={() => navigate(ele.path)}
+              key={ele.path}
+            >
               {ele.name} {ele.icon}{" "}
             </Li>
           );

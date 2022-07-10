@@ -33,8 +33,8 @@ const DateSwitch = () => {
           renderInput={(params) => <TextField {...params} />}
         />
         <RowDiv>
-          <ArrowForwardIcon style={{color: "#28303F", opacity: "0.4" }} />
-          <ArrowBackIcon  style={{color: "#28303F", opacity: "0.4" }} />
+          <ArrowForwardIcon style={{ color: "#28303F", opacity: "0.4" }} />
+          <ArrowBackIcon style={{ color: "#28303F", opacity: "0.4" }} />
         </RowDiv>
         <DesktopDatePicker
           value={date}

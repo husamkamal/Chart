@@ -5,7 +5,6 @@ export const ReservationsInformationContainer = styled(Flex)`
   width: 100%;
   justify-content: space-around;
   height: 7rem;
-  /* margin-top:1rem; */
   background: #f6f6f6;
   border-radius: 10px;
 `;
@@ -48,5 +47,5 @@ export const PdfStyle = styled(Flex)`
   background: #fcfcfc;
   border: 1px solid #dddddd;
   border-radius: 10px;
-  /* margin-top: 2.5rem; */
+  margin-top: 2.5rem;
 `;

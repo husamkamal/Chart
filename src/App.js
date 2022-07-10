@@ -4,7 +4,7 @@ import store from "./Store";
 import { Provider } from "react-redux";
 import Main from "./Screens/Main/Main";
 import SidBar from "./Components/SidBar/SidBar";
-import "./index.css"
+import "./index.css";
 import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -43,64 +43,56 @@ function ResponsiveDrawer(props) {
   return (
     <Provider store={store}>
       {/* <Box sx={{ display: "flex" }}> */}
-       
+
       <AppStyle>
-           
-            
-          
-        
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-            sx={{
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-          >
-            {drawer}
-          </Drawer>
-          <Drawer
-          anchor={'right'}
-            variant="permanent"
-            sx={{
-              display: { xs: "none", sm: "block" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-            open
-          >
-            {drawer}
-          </Drawer>
-        
-         
-          <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-          
-            
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/reservations" element={ <ReservationsContentScreen/>} />
-            </Routes>
-          </AppStyle>
-       
-      
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+        <Drawer
+          anchor={"right"}
+          variant="permanent"
+          sx={{
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          edge="start"
+          onClick={handleDrawerToggle}
+          sx={{ mr: 2, display: { sm: "none" } }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/reservations" element={<ReservationsContentScreen />} />
+        </Routes>
+      </AppStyle>
     </Provider>
   );
 }
