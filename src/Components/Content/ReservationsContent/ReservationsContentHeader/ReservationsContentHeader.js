@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { H1 } from "../../MainContent/MainContentHeader/MainHeader.style";
 import {
   ReservationsContentButton,
@@ -6,10 +7,11 @@ import {
 } from "./ReservationsContentHeader.style";
 
 const ReservationsContentHeader = () => {
-  return (
+    const navigate=useNavigate()
+    return (
     <ReservationsContentHead>
       <H1>الحجوزات </H1>
-      <ReservationsContentButton>حجز جديد</ReservationsContentButton>
+      <ReservationsContentButton onClick={()=>navigate('/reservat')}>حجز جديد</ReservationsContentButton>
     </ReservationsContentHead>
   );
 };

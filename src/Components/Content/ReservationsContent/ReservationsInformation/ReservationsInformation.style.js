@@ -4,13 +4,27 @@ import { Flex } from "../../../../Global.style";
 export const ReservationsInformationContainer = styled(Flex)`
   width: 100%;
   justify-content: space-around;
-  height: 7rem;
+  min-height: 7rem;
   background: #f6f6f6;
   border-radius: 10px;
+  margin-bottom:.5rem;
+  @media (max-width: 600px) {
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    padding:1rem;
+    box-sizing:border-box;
+  }
+
 `;
 export const ReservationsInformationDateContainer = styled(Flex)`
   flex-direction: column;
   align-items: flex-start;
+  @media (max-width: 400px) {
+    width:20rem;
+    height:7rem;
+    overflow:auto;
+  }
+
 `;
 export const H1Date = styled.h1`
   font-family: "Tajawal";

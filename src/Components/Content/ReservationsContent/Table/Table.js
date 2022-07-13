@@ -21,8 +21,9 @@ import Switch from "@mui/material/Switch";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
-
-function createData(name, calories, fat, carbs, protein, f, r, e) {
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { TableCellCustom } from "./Table.style";
+function createData(name, calories, fat, carbs, protein, f, r, e, l) {
   return {
     name,
     calories,
@@ -32,6 +33,7 @@ function createData(name, calories, fat, carbs, protein, f, r, e) {
     f,
     r,
     e,
+    l,
   };
 }
 
@@ -44,7 +46,8 @@ const rows = [
     "14-2-2022",
     "11:30 ص",
     "قيد التفيذ",
-    "محمد فتحي"
+    "محمد فتحي",
+    <MoreHorizIcon />
   ),
   createData(
     "007",
@@ -53,8 +56,9 @@ const rows = [
     "37 ريال",
     "13-2-2022",
     "11:00ص",
-    "قيد التنفيذ",
-    "احمد هاني"
+    "قيد التفيذ",
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
   createData(
     "006",
@@ -64,57 +68,63 @@ const rows = [
     "13-2-2022",
     "10:30ص",
     "ملغي",
-    "احمد هاني"
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
   createData(
-    "006",
+    "005",
     "عبد الرحمن ",
     "+236 289 843",
     "40 ريال",
     "13-2-2022",
     "10:30ص",
     "ملغي",
-    "احمد هاني"
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
   createData(
-    "006",
+    "004",
     "عبد الرحمن ",
     "+236 289 843",
     "40 ريال",
     "13-2-2022",
     "10:30ص",
     "ملغي",
-    "احمد هاني"
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
   createData(
-    "006",
+    "003",
+    "عبد الرحمن ",
+    "+236 289 843",
+    "40 ريال",
+    "13-2-2022",
+    "10:30ص",
+    "تم التنفيذ",
+    "احمد هاني",
+    <MoreHorizIcon />
+  ),
+  createData(
+    "002",
     "عبد الرحمن ",
     "+236 289 843",
     "40 ريال",
     "13-2-2022",
     "10:30ص",
     "ملغي",
-    "احمد هاني"
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
   createData(
-    "006",
+    "001",
     "عبد الرحمن ",
     "+236 289 843",
     "40 ريال",
     "13-2-2022",
     "10:30ص",
     "ملغي",
-    "احمد هاني"
-  ),
-  createData(
-    "006",
-    "عبد الرحمن ",
-    "+236 289 843",
-    "40 ريال",
-    "13-2-2022",
-    "10:30ص",
-    "ملغي",
-    "احمد هاني"
+    "احمد هاني",
+    <MoreHorizIcon />
   ),
 ];
 
@@ -216,7 +226,7 @@ function EnhancedTableHead(props) {
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
-          <Checkbox
+          {/* <Checkbox
             color="primary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
@@ -224,7 +234,7 @@ function EnhancedTableHead(props) {
             inputProps={{
               "aria-label": "select all desserts",
             }}
-          />
+          /> */}
         </TableCell>
         {headCells.map((headCell) => (
           <TableCell
@@ -325,7 +335,7 @@ export default function EnhancedTable() {
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -384,22 +394,14 @@ export default function EnhancedTable() {
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
             aria-labelledby="tableTitle"
             size={dense ? "small" : "medium"}
           >
-            <EnhancedTableHead
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody>
+            <EnhancedTableHead />
+            <TableBody sx={{ backgroundColor: "#DDDDDD" }}>
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.slice().sort(getComparator(order, orderBy)) */}
               {stableSort(rows, getComparator(order, orderBy))
@@ -417,6 +419,7 @@ export default function EnhancedTable() {
                       tabIndex={-1}
                       key={row.name}
                       selected={isItemSelected}
+                      sx={{ height: "1rem" }}
                     >
                       <TableCell padding="checkbox">
                         <Checkbox
@@ -428,20 +431,39 @@ export default function EnhancedTable() {
                         />
                       </TableCell>
                       <TableCell
+                        align={"center"}
                         component="th"
                         id={labelId}
                         scope="row"
                         padding="none"
+                        size={"small"}
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="center">{row.calories}</TableCell>
-                      <TableCell align="center">{row.fat}</TableCell>
-                      <TableCell align="center">{row.carbs}</TableCell>
-                      <TableCell align="center">{row.protein}</TableCell>
-                      <TableCell align="center">{row.f}</TableCell>
-                      <TableCell align="center">{row.r}</TableCell>
-                      <TableCell align="center">{row.e}</TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.calories}
+                      </TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.fat}
+                      </TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.carbs}
+                      </TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.protein}
+                      </TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.f}
+                      </TableCell>
+                      <TableCellCustom color={row.r} size={"small"} align="center">
+                        <li>{row.r}</li>
+                      </TableCellCustom>
+                      <TableCell size={"small"} align="center">
+                        {row.e}
+                      </TableCell>
+                      <TableCell size={"small"} align="center">
+                        {row.l}
+                      </TableCell>
                     </TableRow>
                   );
                 })}
@@ -467,10 +489,6 @@ export default function EnhancedTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
-      />
     </Box>
   );
 }

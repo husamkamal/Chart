@@ -24,6 +24,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import ReservationsContentScreen from "./Screens/ReservationsContentScreen/ReservationsContentScreen";
+import NewReservationsContent from "./Components/Content/ReservationsContent/NewReservationsContent/NewReservationsContent";
 
 const drawerWidth = 240;
 
@@ -91,6 +92,7 @@ function ResponsiveDrawer(props) {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/reservations" element={<ReservationsContentScreen />} />
+          <Route path="/reservat" element={<NewReservationsContent />} />
         </Routes>
       </AppStyle>
     </Provider>
