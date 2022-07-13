@@ -5,7 +5,7 @@ export const Sid = styled(Flex)`
   background-color: #4c2784;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;

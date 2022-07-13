@@ -11,27 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.css-hyum1k-MuiToolbar-root{
-min-height: 0;
-}
-.css-18sg6k4-MuiPaper-root-MuiDrawer-paper{
-  position: relative !important;
-}
-.kehJJE{
-  width: 78% !important;
-  display: inline-block !important;
-}
-.css-so9fqd-MuiDrawer-docked{
-  display: inline-block !important;
-}
-.css-hyum1k-MuiToolbar-root{
-  display: inline !important;
-}
-.css-d9ml5t-MuiDrawer-docked{
-  height: 100%  ;
-}
-.css-6iz4mj-MuiButtonBase-root-MuiIconButton-root{
-  position: absolute !important;
-  bottom: 39rem;
-    left: 2rem;
-}
